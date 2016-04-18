@@ -1,0 +1,40 @@
+2014Q1
+Columns
+  Best Date
+  Best Stat
+  Block Lot
+  Cult, Inst, Educ
+  DBI Filed
+  DBI Permit
+  DBI Project Description
+  FirstFiled
+  HEIGHTLIMIT
+  HeightNum
+  LANDUSE
+  Location 1
+  Medical
+  Net Added SF
+  Net Added Units
+  Net Cult, Inst, Educ
+  Net Medical
+  Net Office
+  Net Prod, Dist, Rep
+  Net Ret, Ent
+  Net Visitor
+  ObjectID
+  Office
+  Planning Filed
+  Planning ID
+  Planning Neighborhood
+  Planning Project Description
+  PlanningDistrictsCombo
+  Prod, Dist, Rep
+  Ret, Ent
+  sort
+  TAZ
+  Total GSF (Commercial)
+  Units
+  Visitor
+  ZONING
+  Zoning_Generalized
+  Zoning_Simplified

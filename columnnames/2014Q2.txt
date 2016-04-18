@@ -1,0 +1,49 @@
+2014Q2
+Columns
+  AFFORDABLE
+  AFFORDABLENET
+  Best Date
+  Best Stat
+  Block Lot
+  CONTACTADD
+  CONTACTCITY
+  CONTACTPHONE
+  Cult, Inst, Educ
+  DBI Filed
+  DBI Permit
+  DBI Project Description
+  EntitlementStatus
+  FirstFiled
+  FULLNAME
+  HEIGHTLIMIT
+  HeightNum
+  LANDUSE
+  Location 1
+  Medical
+  Net Added SF
+  Net Added Units
+  Net Cult, Inst, Educ
+  Net Medical
+  Net Office
+  Net Prod, Dist, Rep
+  Net Ret, Ent
+  Net Visitor
+  ObjectID
+  Office
+  Planning Filed
+  Planning ID
+  Planning Neighborhood
+  Planning Project Description
+  PlanningDistrictsCombo
+  Prod, Dist, Rep
+  Ret, Ent
+  sort
+  Sponsor Firm
+  Sponsor Name
+  TAZ
+  Total GSF (Commercial)
+  Units
+  Visitor
+  ZONING
+  Zoning_Generalized
+  Zoning_Simplified
