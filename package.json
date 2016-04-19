@@ -1,0 +1,23 @@
+{
+  "name": "sf-planning-pipeline-report",
+  "version": "1.0.0",
+  "description": "The pipeline [dataset](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2015-Quarter-4/ra2x-jzmk)   The pipeline [website](http://sf-planning.org/pipeline-report)   [An old report](http://sf-planning.org/sites/default/files/FileCenter/Documents/9338-pipelinereport_q3_2014.pdf)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thfield/sf-planning-pipeline-report.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thfield/sf-planning-pipeline-report/issues"
+  },
+  "homepage": "https://github.com/thfield/sf-planning-pipeline-report#readme",
+  "dependencies": {
+    "d3": "^3.5.16",
+    "d3-queue": "^2.0.3"
+  }
+}
