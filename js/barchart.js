@@ -21,6 +21,10 @@
       }; })
       .entries(data)
 
+    projByNeighbhood.sort(function(a, b) {
+      return +(a.values.units < b.values.units) || +(a.values.units === b.values.units) - 1;
+    });
+
     var projBySizeGroup = d3.nest()
       .key(function(d) { return projectSize(+d.units) } )
       .key(function(d) { return d.planning_neighborhood })
