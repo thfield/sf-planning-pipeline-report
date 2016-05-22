@@ -68,23 +68,36 @@
         .key(function(d) { return d.planning_neighborhood })
         .rollup(function(v) { return {
           projects: v.length,
-          units: d3.sum(v, function(d) { return +d.units }),
-          netSqFt: d3.sum(v, function(d) { return +d.total_gsf_commercial })
+          net_added_units: d3.sum(v, function(d) { return +d.net_added_units }),
+          net_added_sf: d3.sum(v, function(d) { return +d.net_added_sf })
         }; })
         .entries(data)
 
       percentages(dataNest, 'projects')
-      percentages(dataNest, 'units')
-      //rank(residental-net-units)
-      //rank(commercial-sqft)
+      percentages(dataNest, 'net_added_units')
+      rank(dataNest, 'net_added_units')
+      rank(dataNest, 'net_added_sf')
 
+      //averages(dataNest,'units','project') //average units/project
+
+      function rank(dataNest, varName){
+        dataNest.sort(function(a,b){
+          return b.values[varName] - a.values[varName]
+        })
+        return dataNest.map(function(el,i){
+          el.values[varName +'_rank'] = i +1
+        })
+      }
+// debugger
       var tHead = [
         { title: "Neighborhood" },
         { title: "Projects" },
         { title: "Percent" },
         { title: "Net Units" },
         { title: "Percent" },
-        { title: "Net Comm'l Sq Ft" }
+        { title: "Net Comm'l Sq Ft" },
+        { title: "Residential Rank" },
+        { title: "Commercial Rank" }
       ]
       tHead.forEach(function(el,i){ el.targets = i })
 
@@ -92,9 +105,13 @@
         { data: "key" },
         { data: "values.projects" },
         { data: "values.projects_percent" },
-        { data: "values.units" },
-        { data: "values.units_percent" },
-        { data: "values.netSqFt" }
+        { data: "values.net_added_units" },
+        { data: "values.net_added_units_percent" },
+        { data: "values.net_added_sf" },
+        { data: "values.net_added_units_rank" },
+        { data: "values.net_added_sf_rank" }
+
+
       ]
 
       return { data: dataNest, columns: tCols, columnDefs: tHead, searching: false, paging: false, info: false}
