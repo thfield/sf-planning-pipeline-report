@@ -10,7 +10,7 @@
 
     function table1 () {
       var dataNest = d3.nest()
-        .key(function(d) { return d.entitlementstatus })
+        .key(function(d) { return (d.entitlementstatus == "0") ? 'Under Planning Review' : 'Approved By Planning' })
         .key(function(d) { return d.beststat_group })
         .rollup(function(v) { return {
           projects: v.length,
@@ -32,42 +32,33 @@
       var tData = t1aData.concat(t1bData)
 
       var tHead = [
-        { title: "Entitlement Status", targets: 0},
-        { title: "Status", targets: 1},
-        { title: "Total no of Projects", targets: 2},
-        { title: "Net Housing Units", targets: 3},
-        { title: "Net Comm'l Sqft", targets: 4},
-        { title: "CIE", targets: 5},
-        { title: "Medical", targets: 6},
-        { title: "Office", targets: 7},
-        { title: "PDR", targets: 8},
-        { title: "Retail", targets: 9},
-        { title: "Visitior", targets: 10}
+        { title: "Entitlement Status" },
+        { title: "Status" },
+        { title: "Total no of Projects" },
+        { title: "Net Housing Units" },
+        { title: "Net Comm'l Sqft" },
+        { title: "CIE" },
+        { title: "Medical" },
+        { title: "Office" },
+        { title: "PDR" },
+        { title: "Retail" },
+        { title: "Visitior" }
       ]
+      tHead.forEach(function(el,i){ el.targets = i })
 
-      var tCols = [
-        { data: "entitlementstatus" },
-        { data: "status" },
-        { data: "total num of proj" },
-        { data: "net housing units" },
-        { data: "net comm'l sqft" },
-        { data: "CIE" },
-        { data: "Medical" },
-        { data: "Office" },
-        { data: "PDR" },
-        { data: "Retail" },
-        { data: "Visitior" }
-      ]
+      var grandTotal = flatTotals(tData)
+
+      addFlatFooter('table1', grandTotal)
 
       return { data: tData, columns: tHead, searching: false, paging: false, info: false}
     }
-
 
     function table2 () {
       var dataNest = d3.nest()
         .key(function(d) { return d.planning_neighborhood })
         .rollup(function(v) { return {
           projects: v.length,
+          units: d3.sum(v, function(d) { return +d.units }),
           net_added_units: d3.sum(v, function(d) { return +d.net_added_units }),
           net_added_sf: d3.sum(v, function(d) { return +d.net_added_sf })
         }; })
@@ -75,26 +66,17 @@
 
       percentages(dataNest, 'projects')
       percentages(dataNest, 'net_added_units')
-      rank(dataNest, 'net_added_units')
-      rank(dataNest, 'net_added_sf')
+      ranks(dataNest, 'net_added_units')
+      ranks(dataNest, 'net_added_sf')
+      averages(dataNest,'units','projects') //average units/project
 
-      //averages(dataNest,'units','project') //average units/project
-
-      function rank(dataNest, varName){
-        dataNest.sort(function(a,b){
-          return b.values[varName] - a.values[varName]
-        })
-        return dataNest.map(function(el,i){
-          el.values[varName +'_rank'] = i +1
-        })
-      }
-// debugger
       var tHead = [
         { title: "Neighborhood" },
         { title: "Projects" },
         { title: "Percent" },
         { title: "Net Units" },
         { title: "Percent" },
+        { title: "Avg Units per Proj" },
         { title: "Net Comm'l Sq Ft" },
         { title: "Residential Rank" },
         { title: "Commercial Rank" }
@@ -107,16 +89,28 @@
         { data: "values.projects_percent" },
         { data: "values.net_added_units" },
         { data: "values.net_added_units_percent" },
+        { data: "values.average_units_per_projects" },
         { data: "values.net_added_sf" },
         { data: "values.net_added_units_rank" },
         { data: "values.net_added_sf_rank" }
-
-
       ]
+
+      var grandTotal = totals(dataNest)
+
+      addFooter('table2', [
+        'key',
+        'projects',
+        'projects_percent',
+        'net_added_units',
+        'net_added_units_percent',
+        'average_units_per_projects',
+        'net_added_sf',
+        'net_added_units_rank',
+        'net_added_sf_rank'
+      ], grandTotal)
 
       return { data: dataNest, columns: tCols, columnDefs: tHead, searching: false, paging: false, info: false}
     }
-
 
     function table3 () {
       var dataNest = d3.nest()
@@ -151,13 +145,6 @@
 
       tHead.forEach(function(el,i){ el.targets = i })
 
-      var tCols = [
-        { data: "key" },
-        { data: "values.projects" },
-        { data: "values.units" },
-        { data: "values.netSqFt" }
-      ]
-
       var tData = dataNest.map(function(el){
         var flattened = d3nestToDatatables(el.values)
         flattened.forEach(function(d){d.unshift(el.key)})
@@ -165,7 +152,10 @@
       })
       tData = _.flatten(tData,true)
 
-      return { data: tData, columns: tHead,  searching: false, paging: false, info: false}
+      var grandTotal = flatTotals(tData)
+      addFlatFooter('table3', grandTotal)
+
+      return { data: tData, columns: tHead, searching: false, paging: false, info: false}
     }
 
     // function table4 () {
@@ -189,6 +179,20 @@
       percentages(dataNest, 'net_added_units')
       percentages(dataNest, 'net_prod_dist_rep')
 
+      var grandTotal = totals(dataNest)
+
+      addFooter('table5', [
+        'neighborhood',
+        'projects',
+        'projects_percent',
+        'net_added_units',
+        'net_added_units_percent',
+        'net_prod_dist_rep',
+        'net_prod_dist_rep_percent'
+      ], grandTotal)
+
+
+
       var tHead = [
         { title: "Neighborhood" },
         { title: "Projects" },
@@ -210,7 +214,6 @@
         { data: "values.net_prod_dist_rep"},
         { data: "values.net_prod_dist_rep_percent"}
       ]
-
       return { data: dataNest, columns: tCols, columnDefs: tHead, searching: false, paging: false, info: false}
     }
 
@@ -252,14 +255,25 @@
         { data: "values.net_office_percent"}
       ]
 
+      var grandTotal = totals(dataNest)
+      addFooter('table6', [
+        'neighborhood',
+        'projects',
+        'projects_percent',
+        'net_added_units',
+        'net_added_units_percent',
+        'net_office',
+        'net_office_percent'
+      ], grandTotal)
+
       return { data: dataNest, columns: tCols, columnDefs: tHead, searching: false, paging: false, info: false}
 
     }
 
     $(document).ready(function() {
-      // $('#table1').DataTable( table1() )
-      // $('#table1').prepend('<caption>Table 1 - Residential and Commercial Pipeline, by Pipeline Status and Land Use Category</caption>')
-      //
+      $('#table1').DataTable( table1() )
+      $('#table1').prepend('<caption>Table 1 - Residential and Commercial Pipeline, by Pipeline Status and Land Use Category</caption>')
+
       $('#table2').DataTable( table2() )
       $('#table2').prepend('<caption>Table 2 - Residential and Commercial Pipeline, by Neighborhood</caption>')
 
@@ -274,7 +288,6 @@
 
       $('#table6').DataTable( table6() )
       $('#table6').prepend('<caption>Table 6 - Office Space Conversion to Residential Use, by Planning District</caption>')
-
     })
   }
 
@@ -296,8 +309,67 @@
     },0)
     return dataNest.map(function(el){
       var percent = Math.round(el.values[varName]/totalVarName*100)
-      el.values[varName +'_percent'] = percent + '%'
+      el.values[varName +'_percent'] = percent //+ '%'
     })
   }
+
+  function ranks(dataNest, varName){
+    dataNest.sort(function(a,b){
+      return b.values[varName] - a.values[varName]
+    })
+    return dataNest.map(function(el,i){
+      el.values[varName +'_rank'] = i +1
+    })
+  }
+
+  function averages(dataNest, var1, var2){
+    //average num of var1 per var2
+    return dataNest.map(function(el,i){
+      el.values['average_'+ var1 + '_per_' + var2] = Math.round(el.values[var1]/el.values[var2])
+    })
+  }
+
+  function totals(dataNest) {
+    return dataNest.reduce(function(prev, curr) {
+      var next = {}
+      for (variable in curr.values) {
+        next[variable] = (!prev[variable] ? 0 : prev[variable]) + curr.values[variable]
+      }
+      return next
+    },{})
+  }
+
+  function flatTotals(dataArray) {
+    return dataArray.reduce(function(prev,curr){
+      var next = []
+      curr.forEach(function(el,i){
+        next[i] = (!prev[i] ? 0 : +prev[i]) + +curr[i]
+      })
+      return next
+    },[])
+  }
+
+  function addFooter(tableEl, cols, totals) {
+    $('#'+tableEl).append('<tfoot>')
+    $('#'+tableEl + ' tfoot').append('<tr>')
+    var footer = $('#'+tableEl + ' tfoot tr')
+    cols.forEach(function(el,i){
+      if (i==0) {footer.append('<th>Total</th>')}
+      else {footer.append('<th class="text-right">'+totals[el]+'</th>')}
+    })
+  }
+
+  function addFlatFooter(tableEl, totals) {
+    $('#'+tableEl).append('<tfoot>')
+    $('#'+tableEl + ' tfoot').append('<tr>')
+    var footer = $('#'+tableEl + ' tfoot tr')
+    totals.forEach(function(el,i){
+      if (i==0) {footer.append('<th>Total</th>')}
+      else if (i==1) {footer.append('<th></th>')}
+      else {footer.append('<th class="text-right">'+el+'</th>')}
+    })
+  }
+
+
 
 }());
