@@ -158,10 +158,71 @@
       return { data: tData, columns: tHead, searching: false, paging: false, info: false}
     }
 
-    // function table4 () {
-    //
-    //   return { data: tData, columns: tHead,  searching: false, paging: false, info: false}
-    // }
+    function table4 () {
+      var projectSize = d3.scale.threshold()
+                        .domain([1,2,10,20,50,100,250])
+                        .range(['0','1','2-9','10-19','20-49','50-99', '100-249','Above 250'])
+
+      var dataNest = d3.nest()
+        .key(function(d) { return d.planning_neighborhood })
+        .rollup(function(v) { return {
+          singleFamily: d3.sum(v, function(d) { return projectSize(+d.units)==='1'}),
+          twoToNine: d3.sum(v, function(d) { return projectSize(+d.units)==='2-9'}),
+          tenToNineteen: d3.sum(v, function(d) { return projectSize(+d.units)==='10-19'}),
+          twentyToFortynine: d3.sum(v, function(d) { return projectSize(+d.units)==='20-49'}),
+          fiftyToNinetynine: d3.sum(v, function(d) { return projectSize(+d.units)==='50-99'}),
+          hundredToTwofifty: d3.sum(v, function(d) { return projectSize(+d.units)==='100-249'}),
+          morethanTwofifty: d3.sum(v, function(d) { return projectSize(+d.units)==='Above 250'}),
+          grandTotal: d3.sum(v, function(d) { return +d.units })
+        }; })
+        .entries(data)
+      ranks(dataNest,'grandTotal')
+      // debugger
+
+
+      var tHead = [
+        { title: "Neighborhood" },
+        { title: "Single Family" },
+        { title: "2-9 Units" },
+        { title: "10-19 Units" },
+        { title: "20-49 Units" },
+        { title: "50-99 Units" },
+        { title: "100-249 Units" },
+        { title: "Above 250" },
+        { title: "Grand Total" },
+        { title: "Rank" }
+      ]
+      tHead.forEach(function(el,i){ el.targets = i })
+
+      var tCols = [
+        { data: "key" },
+        { data: "values.singleFamily" },
+        { data: "values.twoToNine" },
+        { data: "values.tenToNineteen" },
+        { data: "values.twentyToFortynine" },
+        { data: "values.fiftyToNinetynine" },
+        { data: "values.hundredToTwofifty" },
+        { data: "values.morethanTwofifty" },
+        { data: "values.grandTotal" },
+        { data: "values.grandTotal_rank" }
+      ]
+
+      var grandTotal = totals(dataNest)
+
+      addFooter('table4', [
+        'neighborhood',
+        'singleFamily',
+        'twoToNine',
+        'tenToNineteen',
+        'twentyToFortynine',
+        'fiftyToNinetynine',
+        'hundredToTwofifty',
+        'morethanTwofifty',
+        'grandTotal'
+      ], grandTotal)
+
+      return { data: dataNest, columns: tCols, columnDefs: tHead, searching: false, paging: false, info: false}
+    }
 
     function table5 () {
       var lostPDR = data.filter(function(d){ return d.net_prod_dist_rep < 0 })
@@ -280,8 +341,8 @@
       $('#table3').DataTable( table3() )
       $('#table3').prepend('<caption>Table 3 - Residential and Commercial Pipeline by Generalized Zoning Category</caption>')
 
-      // $('#table4').DataTable( table4() )
-      // $('#table4').prepend('<caption>Table 4 - Projects by Neighborhood and Building Size</caption>')
+      $('#table4').DataTable( table4() )
+      $('#table4').prepend('<caption>Table 4 - Projects by Neighborhood and Building Size</caption>')
 
       $('#table5').DataTable( table5() )
       $('#table5').prepend('<caption>Table 5 - PDR Space Conversion to Residential Use, by Planning District</caption>')

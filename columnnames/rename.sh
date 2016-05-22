@@ -1,10 +1,11 @@
 #!/bin/bash
 
 
-for file in `ls columnnames` ; do
+for file in `ls raw` ; do
   # mv $file $file.txt
-  echo $file >> temp.txt
-  egrep -o '<dd title="(.*?)">' columnnames/$file >> temp.txt
+  echo $file >> temp.html
+  cat raw/$file >> temp.html
+  # egrep -o '<dd title="(.*?)">' columnnames/$file >> temp.txt
 done
 
 
