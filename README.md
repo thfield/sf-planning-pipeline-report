@@ -6,12 +6,19 @@ The pipeline [website](http://sf-planning.org/pipeline-report)
 
 [All datasets](https://data.sfgov.org/data?dept=Planning&type=datasets&search=pipeline) posted on SF OpenData
 
+
+Entitlement Status: 0 = Under Planning Review, -1 = Approved By Planning
+APN: Assessor Parcel Number (blocklot, blklot)
+MIPS: Managerial, Information, Professional Services.  (Same as Office?)
+CIE: Cultural, Institutional, Educational
+PDR: Production, Distribution, Repair
+
 | dataset | api link |
 | ---|--- |
 | [2012-Quarter-1](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2012-Quarter-1/v5p2-emnu) | [2012-Quarter-1 api](https://data.sfgov.org/resource/bi8h-tgxg.json) |
 | [2012-Quarter-2](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2012-Quarter-2/ugxk-ztb8) | [2012-Quarter-2 api](https://data.sfgov.org/resource/g6gj-usjb.json) |
 | [2012-Quarter-4](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2012-Quarter-4/b2bw-u33d) | [2012-Quarter-4 api](https://data.sfgov.org/resource/fpzh-9ii5.json) |
-| [2013-Quarter-1](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2013-Quarter-1/bime-puj8) | [2013-Quarter-1 api](https://data.sfgov.org/resource/662u-bk2r.json) |
+|s [2013-Quarter-1](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2013-Quarter-1/bime-puj8) | [2013-Quarter-1 api](https://data.sfgov.org/resource/662u-bk2r.json) |
 | [2013-Quarter-2](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2013-Quarter-2/evrp-pcmc) | [2013-Quarter-2 api](https://data.sfgov.org/resource/ixti-hd8i.json) |
 | [2013-Quarter-3](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2013-Quarter-3/hxup-t2n6) | [2013-Quarter-3 api](https://data.sfgov.org/resource/h2ky-3rra.json) |
 | [2013-Quarter-4](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2013-Quarter-4/ep85-j8df) | [2013-Quarter-4 api](https://data.sfgov.org/resource/s42z-x9np.json) |
