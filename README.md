@@ -1,4 +1,14 @@
 # sf-planning-pipeline-report
+This is a project of the [Data Science Working Group](https://github.com/sfbrigade/data-science-wg) at Code for San Francisco
+
+These DSWG members are contributors to this project, and how to get in touch with us on slack:
+|
+Name | Slack Handle |
+| ---|--- |
+| Tyler Field | @tyler |
+| Sanat Moningi | @sanat |
+| Geoffrey Pay | @gpay |
+
 
 The pipeline [dataset](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2015-Quarter-4/ra2x-jzmk)  
 The pipeline [website](http://sf-planning.org/pipeline-report)  
