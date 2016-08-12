@@ -1,27 +1,21 @@
 # sf-planning-pipeline-report
+## About
 This is a project of the [Data Science Working Group](https://github.com/sfbrigade/data-science-wg) at Code for San Francisco
 
 These DSWG members are contributors to this project, and how to get in touch with us on slack:
-|
-Name | Slack Handle |
+
+| Name | Slack Handle |
 | ---|--- |
 | Tyler Field | @tyler |
 | Sanat Moningi | @sanat |
 | Geoffrey Pay | @gpay |
 
-
+## Links
 The pipeline [dataset](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2015-Quarter-4/ra2x-jzmk)  
 The pipeline [website](http://sf-planning.org/pipeline-report)  
 [An old report](http://sf-planning.org/sites/default/files/FileCenter/Documents/9338-pipelinereport_q3_2014.pdf)
 
 [All datasets](https://data.sfgov.org/data?dept=Planning&type=datasets&search=pipeline) posted on SF OpenData
-
-
-Entitlement Status: 0 = Under Planning Review, -1 = Approved By Planning
-APN: Assessor Parcel Number (blocklot, blklot)
-MIPS: Managerial, Information, Professional Services.  (Same as Office?)
-CIE: Cultural, Institutional, Educational
-PDR: Production, Distribution, Repair
 
 | dataset | api link |
 | ---|--- |
@@ -41,3 +35,10 @@ PDR: Production, Distribution, Repair
 | [2015-Quarter-3](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2015-Quarter-3/apz9-dh7k) | [2015-Quarter-3 api](https://data.sfgov.org/resource/8qip-pyye.json) |
 | [2015-Quarter-4](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2015-Quarter-4/ra2x-jzmk) | [2015-Quarter-4 api](https://data.sfgov.org/resource/6jnk-ty34.json) |
 | [2016-Quarter-1](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2016-Quarter-1/dtz9-jkjt) | [2016-Quarter-1 api](https://data.sfgov.org/resource/6iid-qfaz.json) |
+
+## Useful Term Dictionary
+Entitlement Status: 0 = Under Planning Review, -1 = Approved By Planning  
+APN: Assessor Parcel Number (blocklot, blklot)  
+MIPS: Managerial, Information, Professional Services.  (Same as Office?)  
+CIE: Cultural, Institutional, Educational  
+PDR: Production, Distribution, Repair  
