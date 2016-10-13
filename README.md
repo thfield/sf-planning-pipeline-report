@@ -17,6 +17,8 @@ The pipeline [website](http://sf-planning.org/pipeline-report)
 
 [All datasets](https://data.sfgov.org/data?dept=Planning&type=datasets&search=pipeline) posted on SF OpenData
 
+[column mapping google doc](https://docs.google.com/spreadsheets/d/1ikjaHDLf-iCGBCQ1KmSIXVEiVNbX8pQzW26yYqhrH3U/edit#gid=1633784412)
+
 | dataset | api link |
 | ---|--- |
 | [2012-Quarter-1](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2012-Quarter-1/v5p2-emnu) | [2012-Quarter-1 api](https://data.sfgov.org/resource/bi8h-tgxg.json) |
