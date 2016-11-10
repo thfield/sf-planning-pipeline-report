@@ -9,6 +9,23 @@ These DSWG members are contributors to this project, and how to get in touch wit
 | Tyler Field | @tyler |
 | Sanat Moningi | @sanat |
 | Geoffrey Pay | @gpay |
+| Angelique DeCastro | @angeliquedecastro |
+
+## Working Plan/Next 
+1. Create a data model that can span several quarters, adjusting for the name mismatch
+1. draw data from the Socrata API dynamically
+1. come up with detailed UI design
+1. questions to explore: 
+  - how many units are being built per neighborhood per time period?
+      - how many of those are affordable?
+  - how many projects are being built per neighbood
+  - how much space designated as "light industrial" is being gained/lost per neighboorhood?
+  - projects approved and filed over time:
+      - what happens to the planning process per neighborhood
+      - when were projects filed/approved/started/completed?
+  - size of project vs speed of getting on market?
+  - a way to gauge compliance with Nov 2016's Measure X
+  
 
 ## Links
 The pipeline [dataset](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2015-Quarter-4/ra2x-jzmk)  
