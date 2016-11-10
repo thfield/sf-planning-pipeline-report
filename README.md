@@ -1,4 +1,6 @@
 # sf-planning-pipeline-report
+slack channel: `#datasci-housingreport`
+
 ## About
 This is a project of the [Data Science Working Group](https://github.com/sfbrigade/data-science-wg) at Code for San Francisco
 
