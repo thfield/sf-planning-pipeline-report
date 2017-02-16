@@ -12,6 +12,7 @@ These DSWG members are contributors to this project, and how to get in touch wit
 | Sanat Moningi | @sanat |
 | Geoffrey Pay | @gpay |
 | Angelique DeCastro | @angeliquedecastro |
+| Jeff Quinn | @jfquinn |
 
 ## Working Plan/Next 
 1. Create a data model that can span several quarters, adjusting for the name mismatch
