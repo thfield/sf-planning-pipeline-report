@@ -1,0 +1,38 @@
+key,value
+"block lot",block_lot
+"planning neighborhood",planning_neighborhood
+"project status",project_status
+"project date",project_date
+"units",units
+"planning project description",planning_project_description
+"dbi project description",dbi_project_description
+"zoning_generalized",zoning_generalized
+"zoning_simplified",zoning_simplified
+"taz",taz
+"total gsf (commercial)",total_gsf_commercial
+"office",office
+"cult, inst, educ",cult_inst_educ
+"medical",medical
+"prod, dist, rep",prod_dist_rep
+"ret, ent",ret_ent
+"visitor",visitor
+"dbi permit",dbi_permit
+"planning filed",planning_filed
+"dbi filed",dbi_filed
+"landuse",landuse
+"status group",status_group
+"net added units",net_added_units
+"net added sf",net_added_sf
+"net cult, inst, educ",net_cult_inst_educ
+"net medical",net_medical
+"net office",net_office
+"net prod, dist, rep",net_prod_dist_rep
+"net ret, ent",net_ret_ent
+"net visitor",net_visitor
+"sitearea",sitearea
+"block",block
+"lot",lot
+"zoning",zoning
+"heightlimit",heightlimit
+"supdist",supdist
+"Location 1",location_1
