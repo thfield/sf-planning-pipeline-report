@@ -1,5 +1,4 @@
 block lot,planning neighborhood,project status,project date,units,planning project description,dbi project description,zoning_generalized,zoning_simplified,taz,total gsf (commercial),office,"cult, inst, educ",medical,"prod, dist, rep","ret, ent",visitor,dbi permit,planning filed,dbi filed,landuse,status group,net added units,net added sf,"net cult, inst, educ",net medical,net office,"net prod, dist, rep","net ret, ent",net visitor,sitearea,block,lot,zoning,heightlimit,supdist,Location 1
-block lot,planning neighborhood,best stat,best date,units,planning project description,dbi project description,zoning_generalized,zoning_simplified,taz,total gsf (commercial),office,"cult, inst, educ",medical,"prod, dist, rep","ret, ent",visitor,dbi permit,planning filed,dbi filed,landuse,status group,net added units,net added sf,"net cult, inst, educ",net medical,net office,"net prod, dist, rep","net ret, ent",net visitor,sitearea,block,lot,zoning,heightlimit,supdist,
 4172053,Central Waterfront,BP REINSTATED,11/03/2009 08:00:00 AM +0000,8,,ERECT A FOUR STORY EIGHT UNIT RESIDENTIAL BLDG WITH COML,Mixed Use,NCT-2,521,0,0,0,0,0,0,0,9902819,04/26/2001 07:00:00 AM +0000,02/11/1999 08:00:00 AM +0000,Resident,BP Approved/Issued/Re-Instated,8,0,0,0,0,0,0,0,6090,4172,053,NCT-2,40-X,10,"1179 Tennessee St
 (37.756751, -122.388969)"
 0492025,Marina,BP ISSUED,04/11/2007 07:00:00 AM +0000,0,"The proposed project involves the demolition of an 8,630 gsf, two-story (over grade parking) 30-room motel and construction of a 49,001gsf, 4-story hotel containing 97 rooms.",ERECT A NEW 4 STORY 89 UNIT TOURIST HOTEL W/ GARAGE,Mixed Use,NC-3,819,40370,0,0,0,0,0,40370,200606023107,06/11/2002 07:00:00 AM +0000,06/02/2006 07:00:00 AM +0000,Visitor,BP Approved/Issued/Re-Instated,0,40370,0,0,0,0,0,40370,13612,0492,025,NC-3,40-X,2,"2026 Lombard St
@@ -364,7 +363,7 @@ gross square footage ",ERECT A 15 STORY 174 GUEST ROOM HOTEL.,Commercial,C-3-G,6
 (37.754036, -122.406083)"
 4761031,Other S Bayshore,BP APPROVED,03/23/2012 07:00:00 AM +0000,2,,LEGALIZE GROUND FLOOR UNIT. (REF PA# 2004/03/25/9685),Residential,RH-2,67,0,0,0,0,0,0,0,201112050109,,12/05/2011 08:00:00 AM +0000,Resident,BP Approved/Issued/Re-Instated,1,0,0,0,0,0,0,0,,4761,031,RH-2,40-X,10,"1382 Revere Av
 (37.729395, -122.38589)"
-3736085,TB Combo,BP Filed,07/12/2006 07:00:00 AM +0000,66,"01/24/2001 Shadow Study  Prop. K 
+3736085,TB Combo,BP Filed,07/12/2006 07:00:00 AM +0000,66,"01/24/2001 Shadow Study  Prop. K
 New Construction of 20-story, 200-ft. tall, 49,950-sq-ft. new office building w/ subsurface 3-space parking area after removal of a 16-space parking lot.
 9/26/05- Revised E filed, New Construction of 20-story residential ","TO ERECT 19 STORIES, 66 DWELLING UNITS OF RESIDENTIAL UNIT.",Commercial,C-3-O(SD),730,0,0,0,0,0,0,0,200607126309,12/20/2000 08:00:00 AM +0000,07/12/2006 07:00:00 AM +0000,Resident,BP Filed,66,0,0,0,0,0,0,0,4000,3736,085,C-3-O(SD),200-S,6,"48 Tehama St
 (37.787356, -122.396677)"
@@ -908,7 +907,7 @@ U Case Description: Request for Written Determination Pursuant to Planning Code 
 (37.772595, -122.386896)"
 3554027,Mission,CONSTRUCTION,03/06/2012 08:00:00 AM +0000,16,"Construction 24-du bldg, with 1+ 16 stacked parking spaces on ground floor accessed from Caledonia Street, with two ground floor retail spaces of 620-gsf and 700-gsf on Valencia Street; six stories plus roof deck, 16,800-gsf total, on existing vacant lot.","ERECT A 4 STORY, EIGHT UNIT RESIDENTIAL STRUCTURE",Neighborhood Commercial,Valencia Street,223,1400,,,,,1400,,200510135500,08/25/2009 07:00:00 AM +0000,10/13/2005 07:00:00 AM +0000,Mixres,Construction,16,1400,,,,,1400,,4962,3554,027,Valencia St NCT,55-X,6,"411 Valencia St
 (37.76633, -122.421838)"
-3729081,WSoMa,CONSTRUCTION,02/07/2012 08:00:00 AM +0000,3,"Conversion from Office to Residential / Commercial. Addition of 2 stories and 7000 sf for a new 561/2 foot high, 14,500 sf bldg. 
+3729081,WSoMa,CONSTRUCTION,02/07/2012 08:00:00 AM +0000,3,"Conversion from Office to Residential / Commercial. Addition of 2 stories and 7000 sf for a new 561/2 foot high, 14,500 sf bldg.
 SRO
 
 >>Rear yard modification. ","ADD 2 NEW FLOORS TO BUILDING, 3 NEW RESIDENTIAL UNITS. REPLACE EXISTING STAIRCASES AND ELEVATOR. NEW",Industrial,SLR,596,0,0,0,0,0,0,0,200810164336,10/13/2005 07:00:00 AM +0000,10/16/2008 07:00:00 AM +0000,Resident,Construction,3,-11600,0,0,-11600,0,0,0,4017,3729,081,SLR,50-X,6,"209 09th St
@@ -1092,8 +1091,8 @@ R-Case: The project proposes to remove existing Bayview Anna E Waden Branch Libr
 (37.755364, -122.423547)"
 3749064,TB Combo,CONSTRUCTION,03/09/2012 08:00:00 AM +0000,120,Housing for Chronically homeless,"NEW CONSTRUCTION - 8 stories of 120 DU's and future  supportive office(s), retail(s), restaurant(s) ",Industrial,M-1,730,0,0,0,0,0,0,0,201003158191,,03/15/2010 07:00:00 AM +0000,Resident,Construction,120,0,0,0,0,0,0,0,29809,3749,064,M-1,84-X,6,"25 Essex St
 (37.78638, -122.395689)"
-0816003,Market Octavia,CONSTRUCTION,02/28/2012 08:00:00 AM +0000,0,"MEA Desc.: The project is demolition of existing autobody/repair shop and construction of three-story performing arts venue for jazz music and education; 
-two schemes under consideration, maximum development 37,400-sf. 
+0816003,Market Octavia,CONSTRUCTION,02/28/2012 08:00:00 AM +0000,0,"MEA Desc.: The project is demolition of existing autobody/repair shop and construction of three-story performing arts venue for jazz music and education;
+two schemes under consideration, maximum development 37,400-sf.
 NP Desc: CU Authorization for Other","TO ERECT 4 STORIES, PERFORMING ARTS VENUE, EDUCATION, ADMIN, CAFE.
 (n) bldg. 4-stories on the corner",Neighborhood Commercial,HAYES NCT,259,35000,0,12000,,,23000,,201004130190,06/23/2010 07:00:00 AM +0000,04/13/2010 07:00:00 AM +0000,Mixed,Construction,0,14500,12000,,-4000,,6500,,16565,0816,003,HAYES NCT,40-X/50-X/65-,6,"205 Franklin St
 (37.776253, -122.421271)"
