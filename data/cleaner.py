@@ -4,8 +4,8 @@ import os
 from itertools import izip
 
 ################################################################################
-# Allows for a mapping file to be used to convert field names from the file
-# format to the desired value
+# Allows for a map of column names to be used to convert field names and output
+# the result into a dict object
 #
 def load_csv_with_mapping(csvfile, column_mapping):
     mapped_data = []
