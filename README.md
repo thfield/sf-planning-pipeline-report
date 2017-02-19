@@ -13,12 +13,13 @@ These DSWG members are contributors to this project, and how to get in touch wit
 | Geoffrey Pay | @gpay |
 | Angelique DeCastro | @angeliquedecastro |
 | Jeff Quinn | @jfquinn |
+| Arash Aghevli | @arashaghevli |
 
-## Working Plan/Next 
+## Working Plan/Next
 1. Create a data model that can span several quarters, adjusting for the name mismatch
 1. draw data from the Socrata API dynamically
 1. come up with detailed UI design
-1. questions to explore: 
+1. questions to explore:
   - how many units are being built per neighborhood per time period?
       - how many of those are affordable?
   - how many projects are being built per neighbood
@@ -28,16 +29,15 @@ These DSWG members are contributors to this project, and how to get in touch wit
       - when were projects filed/approved/started/completed?
   - size of project vs speed of getting on market?
   - a way to gauge compliance with Nov 2016's Measure X
-  
+
 
 ## Links
 The pipeline [dataset](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2015-Quarter-4/ra2x-jzmk)  
 The pipeline [website](http://sf-planning.org/pipeline-report)  
 [An old report](http://sf-planning.org/sites/default/files/FileCenter/Documents/9338-pipelinereport_q3_2014.pdf)
+[an obsolete column mapping google doc](https://docs.google.com/spreadsheets/d/1ikjaHDLf-iCGBCQ1KmSIXVEiVNbX8pQzW26yYqhrH3U/edit#gid=1633784412)
 
-[All datasets](https://data.sfgov.org/data?dept=Planning&type=datasets&search=pipeline) posted on SF OpenData
-
-[column mapping google doc](https://docs.google.com/spreadsheets/d/1ikjaHDLf-iCGBCQ1KmSIXVEiVNbX8pQzW26yYqhrH3U/edit#gid=1633784412)
+See [data/README.MD](data/README.MD) for details about the data
 
 | dataset | api link |
 | ---|--- |

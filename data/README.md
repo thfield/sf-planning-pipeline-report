@@ -1,11 +1,15 @@
 Housing Pipeline Dataset
 ========================
 
-This directory contains the housing pipeline dataset in CSV form.
+This directory contains the housing pipeline dataset downloaded from [The SF OpenData](https://data.sfgov.org/data?dept=Planning&type=datasets&search=pipeline)
+* [cleaned](cleaned) - canonical JSON housing data used for analysis
+* [raw](raw) - raw datasets in csv format
+* [raw/columnnames](raw) - transform file to map raw csv columns to a standard set
+* [cleaner.py](cleaner.py) - transform to clean the raw data
 
-Files are marked as belonging to a certain quarter, but that file can contain events from previous quarters. 
+Files are marked as belonging to a certain quarter, but that file can contain events from previous quarters.
 
-It is unclear what the relationship between the quarter of the file and date of the events it contains is. 
+It is unclear what the relationship between the quarter of the file and date of the events it contains is.
 
 Data Model
 ----------
@@ -92,9 +96,9 @@ Glossary
 Other Notes
 -----------
 
-The Pipeline Report measures housing production in terms of housing units. Non-residential development, on the other hand, is measured in terms of building square footage. 
+The Pipeline Report measures housing production in terms of housing units. Non-residential development, on the other hand, is measured in terms of building square footage.
 
-Columns concerning number of units may be blank for non-residential development, and vice versa. 
+Columns concerning number of units may be blank for non-residential development, and vice versa.
 
 
 Data Issues
@@ -102,9 +106,9 @@ Data Issues
 
 ### Duplicate Records
 
-There seem to be some duplicate records in the dataset, 
+There seem to be some duplicate records in the dataset,
 
-For example, these two records have the same `APN`, `BEST_STATE`, and `BEST_DATE`, however the address is slightly different. 
+For example, these two records have the same `APN`, `BEST_STATE`, and `BEST_DATE`, however the address is slightly different.
 
 
 
