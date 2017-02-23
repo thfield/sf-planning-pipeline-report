@@ -1,6 +1,6 @@
 key,value
 "ObjectID",objectid
-"Block Lot",block_lot
+"Block Lot",apn
 "Planning Neighborhood",planning_neighborhood
 "Best Stat",best_stat
 "Best Date",best_date
