@@ -5,7 +5,7 @@ key,value
 "CASENO",caseno
 "BPAPPLNO",bpapplno
 "PROPUSE",propuse
-"BLKLOT",blklot
+"BLKLOT",apn
 "LANDUSE",landuse
 "DESCRIPT",descript
 "DBIDESC",dbidesc

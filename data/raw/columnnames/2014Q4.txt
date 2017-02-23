@@ -1,6 +1,6 @@
 key,value
 "NEIGHBORHOOD",neighborhood
-"BLKLOT",blklot
+"BLKLOT",apn
 "NAMEADDR",nameaddr
 "UNITS",units
 "UNITSNET",unitsnet
