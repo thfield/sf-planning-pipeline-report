@@ -1,6 +1,6 @@
 key,value
-"BESTDATE",bestdate
-"BESTSTAT",beststat
+"BESTDATE",best_date
+"BESTSTAT",best_stat
 "NAMEADDR",nameaddr
 "Alias",alias
 "LANDUSE",landuse

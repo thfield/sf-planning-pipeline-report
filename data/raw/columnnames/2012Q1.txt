@@ -1,8 +1,8 @@
 key,value
 "block lot",block_lot
 "planning neighborhood",planning_neighborhood
-"project status",project_status
-"project date",project_date
+"project status",best_stat
+"project date",best_date
 "units",units
 "planning project description",planning_project_description
 "dbi project description",dbi_project_description

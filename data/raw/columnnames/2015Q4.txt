@@ -2,8 +2,8 @@ key,value
 "NEIGHBORHOOD",neighborhood
 "APN",apn
 "LANDUSE",landuse
-"BESTSTAT",beststat
-"BESTDATE",bestdate
+"BESTSTAT",best_stat
+"BESTDATE",best_date
 "NAMEADDR",nameaddr
 "Alias",alias
 "CASENO",caseno

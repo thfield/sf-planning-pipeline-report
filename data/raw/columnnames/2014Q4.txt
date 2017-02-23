@@ -4,8 +4,8 @@ key,value
 "NAMEADDR",nameaddr
 "UNITS",units
 "UNITSNET",unitsnet
-"BESTDATE",bestdate
-"BESTSTAT",beststat
+"BESTDATE",best_date
+"BESTSTAT",best_stat
 "EntitlementStatus",entitlementstatus
 "CASENO",caseno
 "DESCRIPT",descript

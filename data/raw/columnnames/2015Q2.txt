@@ -1,8 +1,8 @@
 key,value
 "APN",apn
 "NAMEADDR",nameaddr
-"BESTSTAT",beststat
-"BESTDATE",bestdate
+"BESTSTAT",best_stat
+"BESTDATE",best_date
 "CASENO",caseno
 "BPAPPLNO",bpapplno
 "PROPUSE",propuse
