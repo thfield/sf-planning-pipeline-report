@@ -5,6 +5,7 @@ slack channel: `#datasci-housingreport`
 This is a project of the [Data Science Working Group](https://github.com/sfbrigade/data-science-wg) at Code for San Francisco
 
 [The original ask](https://github.com/sfbrigade/make-with-open-data/blob/master/quarterly-planning-reports.md), or how this project got started.
+
 These DSWG members are contributors to this project, and how to get in touch with us on slack:
 
 | Name | Slack Handle |
