@@ -4,16 +4,17 @@ slack channel: `#datasci-housingreport`
 ## About
 This is a project of the [Data Science Working Group](https://github.com/sfbrigade/data-science-wg) at Code for San Francisco
 
+[The original ask](https://github.com/sfbrigade/make-with-open-data/blob/master/quarterly-planning-reports.md), or how this project got started.
 These DSWG members are contributors to this project, and how to get in touch with us on slack:
 
 | Name | Slack Handle |
 | ---|--- |
+| Jeff Quinn | @jfquinn |
+| Arash Aghevli | @arashaghevli |
 | Tyler Field | @tyler |
 | Sanat Moningi | @sanat |
 | Geoffrey Pay | @gpay |
 | Angelique DeCastro | @angeliquedecastro |
-| Jeff Quinn | @jfquinn |
-| Arash Aghevli | @arashaghevli |
 
 ## Working Plan/Next
 1. Create a data model that can span several quarters, adjusting for the name mismatch
