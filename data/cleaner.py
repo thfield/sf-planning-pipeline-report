@@ -4,6 +4,12 @@ import glob
 import json
 import os
 import pandas
+import logging
+import numpy
+
+import geo_classifier
+
+logging.basicConfig()
 
 
 def clean_values(data):
@@ -20,10 +26,22 @@ def clean_values(data):
 
 def clean_df(df):
     # Standardize best_stat
-    df.best_stat = df.best_stat.apply(lambda x: x.strip().upper()).value_counts()
+    df.best_stat = df.best_stat.apply(lambda x: x.strip().upper())
 
     # Standardize best_date
     df.best_date = df.best_date.apply(maybe_format_date)
+
+    # Standardize Lat/Long
+    records_with_location_attribute = df.location.notnull()
+    df.x[records_with_location_attribute] = df.location[records_with_location_attribute].apply(get_lat_from_glob)
+    df.y[records_with_location_attribute] = df.location[records_with_location_attribute].apply(get_long_from_glob)
+
+    records_with_geography_attribute = df.geography.notnull()
+    df.x[records_with_geography_attribute] = df.geography[records_with_geography_attribute].apply(get_lat_from_glob)
+    df.y[records_with_geography_attribute] = df.geography[records_with_geography_attribute].apply(get_long_from_glob)
+
+    # Classify neighborhoods using point-in-polygon approach
+    geo_classifier.classify_df(df)
 
     return df
 
@@ -35,8 +53,37 @@ def maybe_format_date(s):
     """
     try:
         return dateutil.parser.parse(s.strip()[:10]).strftime("%Y-%m-%d")
-    except:
+    except Exception as e:
+        logging.exception("Date formatting failed for {}".format(s))
         return s
+
+
+def get_coords_tuple_from_address_lat_long_glob(s):
+    """
+    For some quarters, the address and lat/long tuple are
+    in the same column, concatenated together with a newline
+
+    Returns: tuple
+    """
+    lat_long_tuple = s.split('\n')[-1]
+    # Dirty hack, the lat long tuple happens to be valid python syntax so.. YOLO
+    return eval(lat_long_tuple)
+
+
+def get_lat_from_glob(s):
+    try:
+        return get_coords_tuple_from_address_lat_long_glob(s)[0]
+    except Exception as e:
+        logging.exception("Lat long glob parsing failed for {}".format(s))
+        return numpy.nan
+
+
+def get_long_from_glob(s):
+    try:
+        return get_coords_tuple_from_address_lat_long_glob(s)[1]
+    except Exception as e:
+        logging.exception("Lat long glob parsing failed for {}".format(s))
+        return numpy.nan
 
 
 def main():
@@ -68,6 +115,9 @@ def main():
                 column_mapping[row['key']] = row['value']
             column_mappings.append(column_mapping)
 
+
+    all_housing_data = []
+
     ################################################################################
     # Load each file based on filename conventions and apply the column cleaning
     #
@@ -79,13 +129,19 @@ def main():
 
         housing_data_csv_filename = 'data/raw/' + filename + '.csv'
         print('loading ' + housing_data_csv_filename)
+
+
         with open(housing_data_csv_filename, 'r') as csvfile:
             housing_data = load_csv_with_mapping(csvfile, column_mapping)
-
+            all_housing_data.extend(housing_data)
             housing_data_json_filename = 'data/cleaned/' + filename + '.json'
-            df = clean_values(housing_data)
+            df = pandas.DataFrame(housing_data)
             print('writing ' + housing_data_json_filename)
             df.to_json(housing_data_json_filename, orient='records')
+
+    df = pandas.DataFrame(all_housing_data)
+    df = clean_df(df)
+    df.to_csv("data/cleaned/all_quarters_merged.csv")
 
 
 if __name__ == '__main__':
