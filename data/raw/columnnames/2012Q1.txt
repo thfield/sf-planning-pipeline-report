@@ -1,6 +1,6 @@
 key,value
 "block lot",apn
-"planning neighborhood",planning_neighborhood
+"planning neighborhood",neighborhood
 "project status",best_stat
 "project date",best_date
 "units",units

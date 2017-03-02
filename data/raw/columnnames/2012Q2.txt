@@ -1,7 +1,7 @@
 key,value
 "ObjectID",objectid
 "Block Lot",apn
-"Planning Neighborhood",planning_neighborhood
+"Planning Neighborhood",neighborhood
 "Best Stat",best_stat
 "Best Date",best_date
 "Units",units

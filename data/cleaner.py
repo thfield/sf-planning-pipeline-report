@@ -20,7 +20,7 @@ def clean_values(data):
 
 def clean_df(df):
     # Standardize best_stat
-    df.best_stat = df.best_stat.apply(lambda x: x.strip().upper()).value_counts()
+    df.best_stat = df.best_stat.apply(lambda x: x.strip().upper())
 
     # Standardize best_date
     df.best_date = df.best_date.apply(maybe_format_date)
