@@ -36,7 +36,7 @@ These DSWG members are contributors to this project, and how to get in touch wit
 ## Links
 The pipeline [dataset](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2015-Quarter-4/ra2x-jzmk)  
 The pipeline [website](http://sf-planning.org/pipeline-report)  
-[An old report](http://sf-planning.org/sites/default/files/FileCenter/Documents/9338-pipelinereport_q3_2014.pdf)
+[An old report](http://sf-planning.org/sites/default/files/FileCenter/Documents/9338-pipelinereport_q3_2014.pdf)  
 [an obsolete column mapping google doc](https://docs.google.com/spreadsheets/d/1ikjaHDLf-iCGBCQ1KmSIXVEiVNbX8pQzW26yYqhrH3U/edit#gid=1633784412)
 
 See [data/README.MD](data/README.MD) for details about the data
@@ -61,17 +61,21 @@ See [data/README.MD](data/README.MD) for details about the data
 | [2016-Quarter-1](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2016-Quarter-1/dtz9-jkjt) | [2016-Quarter-1 api](https://data.sfgov.org/resource/6iid-qfaz.json) |
 | [2016-Quarter-2](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2016-Quarter-2/g5sr-9nhs) | [2016-Quarter-2 api](https://data.sfgov.org/resource/3n2r-nn4r.json) |
 
-
-## Annual Housing Inventory Reports
+### Annual Housing Inventory Reports
 - [2011](https://data.sfgov.org/Housing-and-Buildings/2011-Housing-Inventory/mpcm-79w2)
 - [2012](https://data.sfgov.org/Housing-and-Buildings/2012-Housing-Inventory/4xa2-t52k)
 - [2013](https://data.sfgov.org/Housing-and-Buildings/2013-Housing-Inventory/e7d3-dxh5)
 - [2014](https://data.sfgov.org/Housing-and-Buildings/2014-Housing-Inventory/b8d6-zthg)
 - [2015](https://data.sfgov.org/Housing-and-Buildings/2015-Housing-Inventory/4htx-8nvv)
 
+### Affordable Housing Reports
+- https://data.sfgov.org/Housing-and-Buildings/Mayor-s-Office-of-Housing-and-Community-Developmen/9rdx-httc
+- https://data.sfgov.org/Housing-and-Buildings/Affordable-Housing-Pipeline/aaxw-2cb8
+
+
 ## Useful Term Dictionary
 Entitlement Status: 0 = Under Planning Review, -1 = Approved By Planning  
 APN: Assessor Parcel Number (blocklot, blklot)  
-MIPS: Managerial, Information, Professional Services.  (Same as Office?)  
+MIPS: Managerial, Information, Professional Services.  (Same as Office)  
 CIE: Cultural, Institutional, Educational  
 PDR: Production, Distribution, Repair  
