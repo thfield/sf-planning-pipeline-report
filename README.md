@@ -25,11 +25,12 @@ These DSWG members are contributors to this project, and how to get in touch wit
 | Geoffrey Pay | @gpay |
 | Angelique DeCastro | @angeliquedecastro |
 
-## Working Plan/Next
+## Working Plan/Current Priorities
 1. Create a data model that can span several quarters, adjusting for the name mismatch
-2. Draw data from the Socrata API dynamically
-3. Come up with detailed UI design
-4. Questions to explore:
+2. Come up with detailed UI design
+
+## Questions we want to answer
+
 The main question(s) we want to tackle with an interactive visualization would be the following. 
 - How long it takes a project to go from start to end.
     - Does it depend on neighborhood? Size of project?
