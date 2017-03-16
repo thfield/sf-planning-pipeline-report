@@ -17,13 +17,12 @@ def load_polygons():
 def get_point(x, y):
     point = ogr.Geometry(ogr.wkbPoint)
     logging.info("Adding point: ({x},{y})".format(x=x, y=y))
-    point.AddPoint(x, y)
+    point.AddPoint(y, x)
     return point
 
 
 def classify_point(point, polygons):
     for polygon in polygons:
-        import ipdb;ipdb.set_trace()
         if polygon.GetGeometryRef().Contains(point):
             return polygon.GetField('nhood')
     logging.info("No polygon found for {}".format(str(point)))
