@@ -16,7 +16,8 @@ def load_polygons():
 
 def get_point(x, y):
     point = ogr.Geometry(ogr.wkbPoint)
-    point.AddPoint(x * 10000, y * 10000)
+    logging.info("Adding point: ({x},{y})".format(x=x, y=y))
+    point.AddPoint(y, x)
     return point
 
 
