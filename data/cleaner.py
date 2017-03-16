@@ -17,7 +17,7 @@ def clean_values(data):
     Args
     data: List of python objects
 
-    Returns: pandas.DataFrame 
+    Returns: pandas.DataFrame
     """
     # load to data frame for convenience
     df = pandas.DataFrame(data)
@@ -116,7 +116,7 @@ def main():
             column_mappings.append(column_mapping)
 
 
-    all_housing_data = []
+    all_housing_data = pandas.DataFrame()
 
     ################################################################################
     # Load each file based on filename conventions and apply the column cleaning
@@ -133,14 +133,15 @@ def main():
 
         with open(housing_data_csv_filename, 'r') as csvfile:
             housing_data = load_csv_with_mapping(csvfile, column_mapping)
-            all_housing_data.extend(housing_data)
             housing_data_json_filename = 'data/cleaned/' + filename + '.json'
             df = pandas.DataFrame(housing_data)
+            df['original_data_file'] = housing_data_csv_filename
+            df['report_year'] = housing_data_csv_filename.replace(".csv",'').split("_")[4]
+            df['report_quarter'] = housing_data_csv_filename.replace(".csv",'').split("_")[6]
+            all_housing_data = all_housing_data.append(df, ignore_index=True)
             print('writing ' + housing_data_json_filename)
             df.to_json(housing_data_json_filename, orient='records')
-
-    df = pandas.DataFrame(all_housing_data)
-    df = clean_df(df)
+    df = clean_df(all_housing_data)
     df.to_csv("data/cleaned/all_quarters_merged.csv")
 
 
