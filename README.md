@@ -6,6 +6,10 @@ This is a project of the [Data Science Working Group](https://github.com/sfbriga
 
 [The original ask](https://github.com/sfbrigade/make-with-open-data/blob/master/quarterly-planning-reports.md), or how this project got started.
 
+[Here is a past report that's a great overview of the how the data has been used in the past](http://sf-planning.org/sites/default/files/FileCenter/Documents/9338-pipelinereport_q3_2014.pdf)  
+
+[Paula Chiu](mailto:paula.chiu@sfgov.org) is our contact as SF Gov (she's part of our Slack group too)
+
 These DSWG members are contributors to this project, and how to get in touch with us on [slack](http://c4a.me/cfsfslack):
 
 | Name | Slack Handle |
@@ -14,29 +18,46 @@ These DSWG members are contributors to this project, and how to get in touch wit
 | Arash Aghevli | @arashaghevli |
 | Tyler Field | @tyler |
 | Sanat Moningi | @sanat |
+| Earl Dos Santos | @earldossantos |
+| Juan Carlos Collins | @juancarlos |
+| Alwyna Lau | @alwynalau |
+| Paula Chiu | @pchiu-sf |
 | Geoffrey Pay | @gpay |
 | Angelique DeCastro | @angeliquedecastro |
 
 ## Working Plan/Next
 1. Create a data model that can span several quarters, adjusting for the name mismatch
-1. draw data from the Socrata API dynamically
-1. come up with detailed UI design
-1. questions to explore:
-  - how many units are being built per neighborhood per time period?
+2. Draw data from the Socrata API dynamically
+3. Come up with detailed UI design
+4. Questions to explore:
+The main question(s) we want to tackle with an interactive visualization would be the following. 
+- How long it takes a project to go from start to end.
+    - Does it depend on neighborhood? Size of project?
+    - What factors depend on this?
+    - What status of the projects take longer
+    - Is there a status of the project where it's common for projects to get cancelled?
+- At some point in time in the lifecycle of a project, the # of units are defined? This number changes towards the end (usually decreases).Typically speaking how many units do we lose over the course of a project?
+    - What factors tend to lead to this?
+- How many projects are being built per neighborhood?
+    
+Keep in mind we want to look at this at the Neighborhood and Zoning district level not at a individual project level.
+
+Other Questions (From previous meeting):
+  - How many units are being built per neighborhood per time period?
       - how many of those are affordable?
-  - how many projects are being built per neighbood
-  - how much space designated as "light industrial" is being gained/lost per neighboorhood?
-  - projects approved and filed over time:
+  - How many projects are being built per neighbood
+  - How much space designated as "light industrial" is being gained/lost per neighboorhood?
+  - Projects approved and filed over time:
       - what happens to the planning process per neighborhood
       - when were projects filed/approved/started/completed?
-  - size of project vs speed of getting on market?
-  - a way to gauge compliance with Nov 2016's Measure X
+  - Size of project vs speed of getting on market?
+  - A way to gauge compliance with Nov 2016's Measure X
 
 
 ## Links
 The pipeline [dataset](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2015-Quarter-4/ra2x-jzmk)  
-The pipeline [website](http://sf-planning.org/pipeline-report)  
-[An old report](http://sf-planning.org/sites/default/files/FileCenter/Documents/9338-pipelinereport_q3_2014.pdf)  
+The pipeline [website](http://sf-planning.org/pipeline-report)   
+[Notes from March 2017 convo with Paula](https://docs.google.com/document/d/1PDnv3bhyy9-WjfjyPQg4G5H4C4uQ1fRk6G7GUIu1AW0/edit)
 [an obsolete column mapping google doc](https://docs.google.com/spreadsheets/d/1ikjaHDLf-iCGBCQ1KmSIXVEiVNbX8pQzW26yYqhrH3U/edit#gid=1633784412)
 
 See [data/README.MD](data/README.MD) for details about the data
