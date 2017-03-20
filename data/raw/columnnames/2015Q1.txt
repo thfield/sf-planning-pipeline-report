@@ -1,7 +1,7 @@
 key,value
 "BESTSTAT",best_stat
 "BESTDATE",best_date
-"NAMEADDR",nameaddr
+"NAMEADDR",address
 "CASENO",caseno
 "BPAPPLNO",bpapplno
 "PROPUSE",propuse

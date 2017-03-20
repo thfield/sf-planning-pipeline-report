@@ -24,10 +24,13 @@ These DSWG members are contributors to this project, and how to get in touch wit
 | Paula Chiu | @pchiu-sf |
 | Geoffrey Pay | @gpay |
 | Angelique DeCastro | @angeliquedecastro |
+| Caressa Cunningham | @caressalc27 |
 
 ## Working Plan/Current Priorities
-1. Create a data model that can span several quarters, adjusting for the name mismatch
-2. Come up with detailed UI design
+
+1. Create a data model that can span several quarters, adjusting for the name mismatch (@jfquinn, @arashaghevli)
+2. Come up with detailed UI design (@caressalc27, @alwynalau)
+3. Analyze how long projects take for completion. Determine what relationship between project size and completion time is. (@juancarlos)
 
 ## Questions we want to answer
 
@@ -54,6 +57,10 @@ Other Questions (From previous meeting):
   - Size of project vs speed of getting on market?
   - A way to gauge compliance with Nov 2016's Measure X
 
+
+## How do I access the data?
+
+See data/README.md for information about analyzing the data. The data is checked into the repository under `data/cleaned`, and you should not need to download it yourself for most purposes.
 
 ## Links
 The pipeline [dataset](https://data.sfgov.org/Housing-and-Buildings/San-Francisco-Development-Pipeline-2015-Quarter-4/ra2x-jzmk)  

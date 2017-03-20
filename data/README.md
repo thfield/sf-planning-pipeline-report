@@ -1,5 +1,4 @@
-Housing Pipeline Dataset
-========================
+# Housing Pipeline Dataset
 
 This directory contains the housing pipeline dataset downloaded from [The SF OpenData](https://data.sfgov.org/data?dept=Planning&type=datasets&search=pipeline)
 * [cleaned](cleaned) - canonical JSON housing data used for analysis
@@ -11,8 +10,16 @@ Files are marked as belonging to a certain quarter, but that file can contain ev
 
 It is unclear what the relationship between the quarter of the file and date of the events it contains is.
 
-Data Model
-----------
+## Where is the data?
+
+There are two files right now that are suitable for using for analysis:
+
+* `data/cleaned/all_quarters_merged.csv` - this file is created by the `data/cleaner.py` script. It includes all quarterly files concatenated, with column names and column values standardized.
+* `data/cleaned/all_quarters__one_record_per_project.csv` - this file is created by the `data/data_model.py` script. It is generated from the `all_quarters_merged.csv` file. It has been modified so that there is only one record per project (using apn+address as a unique project identifier). All attributes, such as number of units etc. are taken from the latest recrord received for that project. Other useful variables, such as the duration of a project, its first status, as well as the series of statuses it has gone through are added.
+
+If you find that the information you are interested in is messed up, please modify the scripts so that it is corrected. Avoid doing 1-off, non-reproducible analysis.
+
+## About the dataset
 
 Each row represents a _transition_ into another stage of the pipeline for a single project.
 
@@ -109,7 +116,6 @@ Data Issues
 There seem to be some duplicate records in the dataset,
 
 For example, these two records have the same `APN`, `BEST_STATE`, and `BEST_DATE`, however the address is slightly different.
-
 
 
 |     | NEIGHBORHOOD | APN         | Entitlement | BESTSTAT | BESTDATE   | NAMEADDR        | Alias | PLN_CASENO | BPAPPLNO       | BP_FORM | UNITS | UNITSNET | AFF | AFFNET | SECTION415 | SEC415_TENURE | SENIOR_HSG | STUDENT_HSG | ADDITIONS | NEWCONSTRUCTION | DEMOLITION | CHANGEOFUSE | COST       | BldgUse           | TOTAL_GSF | NET_GSF | CIE | CIENET | MED | MEDNET | MIPS | MIPSNET | PDR | PDRNET | RET | RETNET | VISIT | VISITNET | HOTELRM | HOTELRMNET | FirstFiled | MULTI | PLN_DESC                                                                                                                                                                                                         | DBI_DESC                                           | PLANNER  | EasternNbrhood | PLN_AREA              | PLN_DISTRICT   | HEIGHT | ZONING_SIM | ZONING_DISTRICT_NAME           | Supervisorial             | Location                           |

@@ -1,5 +1,5 @@
 key,value
-"NAMEADDR",nameaddr
+"NAMEADDR",address
 "BESTSTAT",best_stat
 "BESTDATE",best_date
 "Alias",alias

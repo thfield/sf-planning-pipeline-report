@@ -1,6 +1,6 @@
 key,value
 "APN",apn
-"NAMEADDR",nameaddr
+"NAMEADDR",address
 "BESTSTAT",best_stat
 "BESTDATE",best_date
 "CASENO",caseno

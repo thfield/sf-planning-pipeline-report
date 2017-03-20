@@ -4,7 +4,7 @@ import logging
 from osgeo import ogr
 
 
-logging.basicConfig()
+logging.basicConfig(level=logging.INFO)
 
 
 def load_polygons():
@@ -16,7 +16,7 @@ def load_polygons():
 
 def get_point(x, y):
     point = ogr.Geometry(ogr.wkbPoint)
-    logging.info("Adding point: ({x},{y})".format(x=x, y=y))
+    logging.debug("Adding point: ({x},{y})".format(x=x, y=y))
     point.AddPoint(y, x)
     return point
 
@@ -25,11 +25,11 @@ def classify_point(point, polygons):
     for polygon in polygons:
         if polygon.GetGeometryRef().Contains(point):
             return polygon.GetField('nhood')
-    logging.info("No polygon found for {}".format(str(point)))
+    logging.warning("No polygon found for {}".format(str(point)))
     return "Unknown"
 
 
 def classify_df(df):
     polygons = load_polygons()
     coords = zip(df.x.tolist(), df.y.tolist())
-    df['classified_neighborhood'] = pandas.Series([classify_point(get_point(*coord), polygons) for coord in coords])
+    return pandas.Series([classify_point(get_point(*coord), polygons) for coord in coords])
