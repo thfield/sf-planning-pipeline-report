@@ -4,7 +4,7 @@ key,value
 "LANDUSE",landuse
 "BESTSTAT",best_stat
 "BESTDATE",best_date
-"NAMEADDR",nameaddr
+"NAMEADDR",address
 "Alias",alias
 "CASENO",caseno
 "DESCRIPT",descript

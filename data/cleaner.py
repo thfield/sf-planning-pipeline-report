@@ -9,7 +9,8 @@ import numpy
 
 import geo_classifier
 
-logging.basicConfig()
+
+logging.basicConfig(level=logging.INFO)
 
 
 def clean_values(data):
@@ -40,8 +41,15 @@ def clean_df(df):
     df.x[records_with_geography_attribute] = df.geography[records_with_geography_attribute].apply(get_lat_from_glob)
     df.y[records_with_geography_attribute] = df.geography[records_with_geography_attribute].apply(get_long_from_glob)
 
+    # Get address into separate fields for cases where it is concatenated with the lat,long
+    records_with_address_in_location_attribute = df.location.apply(lambda x: not pandas.isnull(x) and '\n' in x)
+    df.address[records_with_address_in_location_attribute] = df.location[records_with_address_in_location_attribute].apply(get_address_from_glob)
+
+    # Standardize address by uppercasing and removing punctuation
+    df.address = df.address.apply(standardize_address)
+
     # Classify neighborhoods using point-in-polygon approach
-    geo_classifier.classify_df(df)
+    df['classified_neighborhood'] = geo_classifier.classify_df(df)
 
     return df
 
@@ -84,6 +92,14 @@ def get_long_from_glob(s):
     except Exception as e:
         logging.exception("Lat long glob parsing failed for {}".format(s))
         return numpy.nan
+
+
+def get_address_from_glob(s):
+    return s.split('\n')[0]
+
+
+def standardize_address(s):
+    return s.upper().replace('.', '').replace(',', '')
 
 
 def main():

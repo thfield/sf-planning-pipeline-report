@@ -1,7 +1,7 @@
 key,value
 "NEIGHBORHOOD",neighborhood
 "BLKLOT",apn
-"NAMEADDR",nameaddr
+"NAMEADDR",address
 "UNITS",units
 "UNITSNET",unitsnet
 "BESTDATE",best_date
@@ -41,7 +41,7 @@ key,value
 "sizecat",sizecat
 "AFFORDABLE",affordable
 "AFFNET",affnet
-"zoning_gen",zoning_gen
+"zoning_gen",zoning_generalized
 "ZONING_SIM",zoning_sim
 "ZONINGDISTRICTNAME",zoningdistrictname
 "HEIGHTLIMIT",heightlimit
